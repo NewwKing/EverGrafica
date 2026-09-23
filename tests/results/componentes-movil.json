@@ -1,0 +1,18 @@
+{
+  "scope": "Isolated actual HTML/CSS/audio modules, local assets embedded only for rendering. HTTP navigation is blocked by administrator in this environment. No Three.js scene rendered.",
+  "checks": [
+    "Isolated document title, logo, cover load; audio does not autoplay",
+    "Uploaded soundtrack decodes and plays via actual player module in Chromium",
+    "Volume, seek, mute, pause, keyboard M and Escape work in isolated component",
+    "Entry events withMusic true/false start or pause music",
+    "Layout 390x844: no horizontal overflow; audio panel contained in viewport",
+    "Layout 360x800: no horizontal overflow; audio panel contained in viewport"
+  ],
+  "errors": [],
+  "audio": {
+    "duration": 209.072472,
+    "time": 0.313016,
+    "paused": false,
+    "volume": 0.32
+  }
+}

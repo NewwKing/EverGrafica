@@ -1,0 +1,55 @@
+[
+  {
+    "file": "index.html",
+    "status": 200,
+    "type": "text/html"
+  },
+  {
+    "file": "src/main.js",
+    "status": 200,
+    "type": "text/javascript"
+  },
+  {
+    "file": "src/media.js",
+    "status": 200,
+    "type": "text/javascript"
+  },
+  {
+    "file": "src/audio-core.js",
+    "status": 200,
+    "type": "text/javascript"
+  },
+  {
+    "file": "models/CanchaMedia.glb",
+    "status": 200,
+    "type": "model/gltf-binary"
+  },
+  {
+    "file": "models/logo-asociacion.glb",
+    "status": 200,
+    "type": "model/gltf-binary"
+  },
+  {
+    "file": "assets/logo-afll.png",
+    "status": 200,
+    "type": "image/png"
+  },
+  {
+    "file": "assets/audio/musica-fortin.mp3",
+    "status": 200,
+    "type": "audio/mpeg"
+  },
+  {
+    "file": "assets/audio/musica-fortin.mp3",
+    "rangeStatus": 206,
+    "bytes": 200
+  },
+  {
+    "file": "assets/audio/musica-fortin.m4a",
+    "rangeStatus": 206,
+    "bytes": 200
+  },
+  {
+    "invalidRange": 416
+  }
+]

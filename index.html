@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07090d">
+  <meta name="description" content="El Fortín Minero: explora Cancha Media, descubre sus mascotas y revela cuatro escudos en vitrinas 3D, con música y tu propio recorrido.">
+  <title>Estadio Serrafin Ferreira de Catavi</title>
+  <link rel="icon" href="./assets/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="./assets/logo-afll.png">
+  <meta property="og:title" content="El Fortín Minero">
+  <meta property="og:description" content="Entra a Cancha Media. Descubre a sus guardianes, revela sus escudos y vive el paseo con música.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/logo-afll.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="app" aria-label="Escenario 3D de Cancha Media"></div>
+  <div class="scene-vignette" aria-hidden="true"></div>
+
+  <section id="boot" class="boot-screen" aria-label="Bienvenida">
+    <header class="boot-header"><a class="brand" href="./" aria-label="El Fortín Minero, inicio"><span class="brand-emblem"><img src="./assets/logo-afll.png" alt="Logo A.F.LL" width="775" height="842"></span><span class="brand-copy"><strong>EL FORTÍN MINERO</strong><small>FÚTBOL · IDENTIDAD · PASIÓN</small></span></a><div class="edition"><i></i> CANCHA MEDIA <span>/</span> EDICIÓN 03</div></header>
+    <main class="boot-layout">
+      <div class="boot-copy">
+        <div class="eyebrow"><span class="short-line"></span> </div>
+        <h1>Estadio Serrafin <br><em>Ferreira de Catavi</em><span class="title-period" aria-hidden="true">✦</span></h1>
+        <p class="boot-lead">Orgullo cataveño<br>Un templo de tradicion y futbol.</p>
+        <p class="boot-description"></p>
+        <div class="boot-cta"><button id="enterExperience" class="primary-btn" disabled><span id="bootButtonText">Preparando el paseo</span><span class="btn-arrow">↗</span></button><button id="enterSilent" class="silent-entry" disabled>Entrar en silencio <span>→</span></button></div>
+        <div class="intro-options"><button id="introHelp" class="text-btn">Cómo funciona <span>＋</span></button><button id="introListen" class="text-btn"><span aria-hidden="true">♫</span> Escuchar la música</button></div><div class="loading-line"><div class="boot-progress" role="progressbar" aria-label="Carga del paseo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="bootProgress"></div></div><span id="bootPercent">0%</span></div>
+        <div id="bootStatus" class="boot-status" role="status" aria-live="polite">Iniciando motor 3D…</div>
+        <div id="bootErrorActions" class="error-actions" hidden><button id="retryBoot" class="ghost-btn">Reintentar</button><button id="mirrorBoot" class="ghost-btn">Cambiar conexión</button></div>
+        <div class="boot-facts"><div><b>05</b><span>Estaciones</span></div><div><b>04</b><span>Escudos ocultos</span></div><div><b>01</b><span>Cancha Media</span></div></div>
+      </div>
+      <div class="hero-gallery" aria-label="Mascotas del paseo">
+        <div class="hero-watermark" aria-hidden="true">FORTÍN</div><div class="hero-grid" aria-hidden="true"></div><div class="hero-orbit" aria-hidden="true"></div>
+        <div class="hero-topline"><span>MASCOTAS DE LOS TRES GRANDES DE LLALLAGUA</span><span>01 — 03</span></div>
+        <article class="hero-character character-gold"><span class="character-num">01</span><img src="./assets/marzo.webp" alt="Mascota de 23 de Marzo" width="512" height="640"><div class="character-base"></div><div class="character-name"><small></small><h2>CLUB DEPORTIVO CULTURAL 23 DE MARZO</h2></div></article>
+        <article class="hero-character character-blue"><span class="character-num">02</span><img src="./assets/ballivian.webp" alt="Mascota de Ballivián" width="512" height="640"><div class="character-base"></div><div class="character-name"><small></small><h2>BALLIVIAN FUTBOL CLUB</h2></div></article>
+        <article class="hero-character character-gold"><span class="character-num">03</span><img src="./assets/racing.webp" alt="Mascota de Racing" width="512" height="640"><div class="character-base"></div><div class="character-name"><small></small><h2>RACING SPORTING CLUB</h2></div></article>
+        <div class="hero-bottomline"><span class="cube-icon" aria-hidden="true">◇</span><span>Los escudos no se muestran.<br><strong>Se descubren.</strong></span><kbd>E</kbd></div>
+      </div>
+    </main>
+    <footer class="boot-footer"><span>HECHO PARA EXPLORAR</span><div><kbd>W,A,S,D</kbd> Caminar <span class="footer-sep">/</span> <kbd>E</kbd> Revelar <span class="footer-sep">/</span> <kbd>V</kbd> Vista general</div><span class="footer-right">EL FORTÍN / 3D</span></footer>
+  </section>
+
+  <div id="experienceUI" class="experience-ui is-hidden" inert>
+    <header class="topbar">
+      <button id="brandButton" class="brand" aria-label="Volver al paseo de Cancha Media"><span class="brand-emblem"><img src="./assets/logo-afll.png" alt="Logo A.F.LL" width="775" height="842"></span><span class="brand-copy"><strong>EL FORTÍN MINERO</strong><small>CANCHA MEDIA / EXPERIENCIA 3D</small></span></button>
+      <nav class="top-nav" aria-label="Navegación principal"><button id="homeButton" class="nav-link active">El paseo</button><button id="zonesButton" class="nav-link">Zonas <span>↗</span></button><button id="viewButton" class="nav-link">Vista general <kbd>V</kbd></button></nav>
+      <div class="top-actions"><button id="soundButton" class="icon-btn sound-indicator" title="Música y volumen" aria-label="Música y volumen" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13M9 8l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2"/><ellipse cx="17" cy="16" rx="3" ry="2"/></svg><i class="audio-dot"></i></button><button id="captureButton" class="icon-btn" title="Guardar postal · P" aria-label="Guardar una postal de la escena"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h4l2-3h4l2 3h4v13H4Z"/><circle cx="12" cy="13" r="4"/></svg></button><button id="qualityButton" class="icon-btn text-icon" title="Cambiar calidad gráfica" aria-label="Cambiar calidad gráfica">HQ</button><button id="helpButton" class="icon-btn" aria-label="Ayuda">?</button></div>
+    </header>
+    <section class="scene-heading"><div class="eyebrow"><i class="status-dot"></i> <span id="locationName">CANCHA MEDIA</span></div><h2 id="sceneTitle">Donde la pasión cobra vida.</h2><p id="sceneSubtitle">Acércate a una mascota y pulsa <kbd>E</kbd>.</p></section>
+    <div id="collection" class="collection"><div><span>ESCUDOS DESCUBIERTOS</span><strong><b id="discoveryCount">0</b><i> / 04</i></strong></div><div id="discoveryDots" class="discovery-dots" aria-label="Escudos descubiertos"><span data-discovery="marzo"></span><span data-discovery="ballivian"></span><span data-discovery="racing"></span><span data-discovery="asociacion"></span></div></div>
+    <div id="crosshair" class="crosshair" aria-hidden="true"><span></span></div>
+    <button id="resumeHint" class="resume-hint">Haz clic en la cancha para mirar <span>↗</span></button>
+    <div id="interactionPrompt" class="interaction-prompt" role="status"><span class="key">E</span><div><small id="interactionEyebrow">MASCOTA</small><strong id="interactionText">Revelar escudo</strong></div><span class="prompt-arrow">↗</span></div>
+
+    <aside id="infoPanel" class="info-panel" aria-hidden="true" inert>
+      <div class="panel-top"><span id="panelKicker" class="eyebrow">VITRINA ABIERTA</span><button id="closeInfo" class="icon-btn" aria-label="Cerrar vitrina">×</button></div>
+      <div class="panel-identity"><img id="panelPortrait" src="./assets/marzo.webp" alt="" width="68" height="85"><div><small id="panelNumber">ESTACIÓN 01</small><h2 id="infoTitle">23 de Marzo</h2></div></div>
+      <div class="panel-divider"></div><p id="infoDescription"></p>
+      <div id="logoStatus" class="logo-status"><i class="status-dot"></i><span></span></div>
+      <button id="visitZone" class="primary-btn compact">Visitar zona <span>↗</span></button>
+      <button id="rotationButton" class="secondary-btn">Pausar movimiento del escudo <span>Ⅱ</span></button>
+      <div class="panel-foot"><kbd>E</kbd><span>Ocultar vitrina. Al alejarte también se cierra.</span></div>
+    </aside>
+
+    <footer class="experience-footer">
+      <div class="walk-status"><span class="status-dot"></span><div><small id="modeLabel">EXPLORACIÓN LIBRE</small><strong id="walkStatusText">Tú eliges el recorrido.</strong></div></div>
+      <nav id="stationNav" class="station-nav" aria-label="Ir a una estación"></nav>
+      <div class="route-map" aria-label="Guía esquemática del paseo"><div><small>GUÍA DEL PASEO</small><span>↗</span></div><svg id="routeMap" viewBox="0 0 160 56" role="img" aria-label="Cinco estaciones alineadas"><path d="M16 19H144" stroke="currentColor" stroke-opacity=".25"/><g id="mapStations"></g><path id="mapPlayer" d="M0 -4L3 4L0 2L-3 4Z" fill="#f6c75c" transform="translate(80 42)"/></svg></div>
+    </footer>
+    <div id="mobileControls" class="mobile-controls"><div class="dpad" aria-label="Movimiento"><button data-key="KeyW" aria-label="Avanzar">↑</button><button data-key="KeyA" aria-label="Izquierda">←</button><button data-key="KeyS" aria-label="Retroceder">↓</button><button data-key="KeyD" aria-label="Derecha">→</button></div><div class="mobile-right"><button id="mobileJump" class="mobile-jump" aria-label="Saltar">↑</button><button id="mobileInteract" class="mobile-interact" aria-label="Interactuar">E</button></div></div>
+  </div>
+
+  <div id="transition" class="transition-screen" aria-hidden="true"><div class="transition-ring"></div><small id="transitionEyebrow">VIAJANDO A</small><strong id="transitionName">CANCHA MEDIA</strong><p id="transitionStatus">Preparando la zona…</p></div>
+  <div id="helpModal" class="modal-backdrop" aria-hidden="true" inert><section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><button id="closeHelp" class="panel-close" aria-label="Cerrar ayuda">×</button><div class="eyebrow">EXPLORA A TU RITMO</div><h2 id="helpTitle">Cada mascota guarda<br>una sorpresa.</h2><p>Ve a una estación, acércate a su mascota y pulsa <kbd>E</kbd>. Su escudo aparecerá dentro de un cubo de cristal, a su lado. No se revela al usar el menú.</p><div class="help-list"><div><kbd>WASD</kbd><span>Caminar</span></div><div><kbd>RATÓN</kbd><span>Mirar</span></div><div><kbd>E</kbd><span>Revelar / ocultar</span></div><div><kbd>V</kbd><span>Ver toda la fila</span></div><div><kbd>SHIFT</kbd><span>Correr</span></div><div><kbd>ESPACIO</kbd><span>Saltar</span></div><div><kbd>ESC</kbd><span>Liberar cursor</span></div><div><kbd>1–5</kbd><span>Ir a una estación</span></div></div><div class="experience-settings"><label class="setting-row"><span>Movimiento suave<small>Reduce los giros y las animaciones decorativas.</small></span><input type="checkbox" id="motionToggle"></label><div class="settings-reset"><span>Tu colección se guarda en este navegador.</span><button id="resetCollection" class="text-btn">Reiniciar colección</button></div></div><div class="help-extra"><span><kbd>M</kbd> Música</span><span><kbd>P</kbd> Guardar postal</span></div><p class="mobile-help">En pantalla táctil: usa las flechas para caminar, arrastra sobre la cancha para mirar y toca E para interactuar.</p><button id="resumeButton" class="primary-btn compact">Entendido <span>↗</span></button></section></div>
+  <div id="zonesModal" class="modal-backdrop" aria-hidden="true" inert><section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="zonesTitle"><button id="closeZones" class="panel-close" aria-label="Cerrar zonas">×</button><div class="eyebrow">MÁS ALLÁ DEL PASEO</div><h2 id="zonesTitle">Elige tu próxima zona.</h2><p>Los accesos de la primera versión siguen aquí. Cada zona se carga cuando la visitas.</p><div id="zoneList" class="zone-list"></div></section></div>
+  <div id="musicDock" class="music-dock" hidden><button id="dockToggle" aria-label="Pausar música" class="dock-play">Ⅱ</button><button id="dockOpen" class="dock-info" aria-label="Abrir reproductor"><span class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span><small>ESTÁS ESCUCHANDO</small><strong>Sonido del Fortín</strong></span></button></div>
+  <div id="audioModal" class="audio-backdrop" aria-hidden="true" inert>
+    <section class="audio-card" role="dialog" aria-modal="true" aria-labelledby="audioTitle">
+      <div class="audio-heading"><span class="eyebrow">LA BANDA SONORA DEL PASEO</span><button id="closeAudio" class="icon-btn" aria-label="Cerrar reproductor">×</button></div>
+      <div class="audio-identity"><div class="record-art"><img src="./assets/logo-afll.png" alt="Logo A.F.LL" width="775" height="842"></div><div><small>EL FORTÍN MINERO</small><h2 id="audioTitle">Que suene<br>la pasión.</h2><p id="audioStatus" role="status">Música lista para acompañarte.</p></div></div>
+      <label for="musicSeek" class="sr-only">Posición de la música</label><input id="musicSeek" class="music-range" type="range" min="0" max="100" step="0.1" value="0" disabled>
+      <div class="track-time"><span id="musicCurrent">0:00</span><span id="musicDuration">—:—</span></div>
+      <div class="transport"><button id="musicBack" class="icon-btn" aria-label="Retroceder diez segundos">↶<small>10</small></button><button id="musicToggle" class="transport-play" aria-label="Reproducir música">▶</button><span class="loop-label">↻ <span>EN BUCLE</span></span></div>
+      <div class="volume-row"><button id="musicMute" class="icon-btn" aria-label="Silenciar música" aria-pressed="false">♪</button><label class="sr-only" for="musicVolume">Volumen de la música</label><input id="musicVolume" class="music-range" type="range" min="0" max="100" step="1" value="32"><output id="musicVolumeValue" for="musicVolume">32%</output></div>
+      <label class="setting-row"><span>Sonido al descubrir un escudo<small>Aviso suave, independiente de la música.</small></span><input type="checkbox" id="effectsToggle"></label>
+      <div class="audio-foot"><kbd>M</kbd> Pausar / continuar <span>Tu volumen se recuerda.</span></div>
+    </section>
+  </div>
+  <audio id="soundtrack" loop preload="none"><source src="./assets/audio/musica-fortin.mp3" type="audio/mpeg"><source src="./assets/audio/musica-fortin.ogg" type="audio/ogg"><source src="./assets/audio/musica-fortin.m4a" type="audio/mp4"></audio>
+  <div id="completionToast" class="completion-toast" role="status" hidden><span class="completion-medal" aria-hidden="true">✦</span><div><small>COLECCIÓN COMPLETA</small><strong>Ya eres parte del Fortín.</strong><p>Cuatro escudos. Una misma pasión.</p></div><button id="closeCompletion" class="icon-btn" aria-label="Cerrar logro">×</button></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript">Activa JavaScript para explorar la experiencia 3D.</div></noscript>
+  <script type="module" src="./src/media.js"></script>
+  <script src="./src/runtime.js"></script>
+  <script src="./src/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+
+> el-fortin-minero@3.0.0 test
+> node --test tests/*.test.js
+
+TAP version 13
+# Subtest: la música no se reproduce al cargar el documento
+ok 1 - la música no se reproduce al cargar el documento
+  ---
+  duration_ms: 7.156055
+  type: 'test'
+  ...
+# Subtest: play y pausa reutilizan el mismo audio conservando la posición
+ok 2 - play y pausa reutilizan el mismo audio conservando la posición
+  ---
+  duration_ms: 0.967045
+  type: 'test'
+  ...
+# Subtest: ocultar pestaña pausa, volver reanuda sólo si el usuario estaba escuchando
+ok 3 - ocultar pestaña pausa, volver reanuda sólo si el usuario estaba escuchando
+  ---
+  duration_ms: 0.930589
+  type: 'test'
+  ...
+# Subtest: un play pendiente no vuelve a sonar tras pausar
+ok 4 - un play pendiente no vuelve a sonar tras pausar
+  ---
+  duration_ms: 0.615388
+  type: 'test'
+  ...
+# Subtest: un rechazo de autoplay se captura sin bloquear el resto de la página
+ok 5 - un rechazo de autoplay se captura sin bloquear el resto de la página
+  ---
+  duration_ms: 0.817079
+  type: 'test'
+  ...
+# Subtest: volumen y posición se mantienen en su rango válido
+ok 6 - volumen y posición se mantienen en su rango válido
+  ---
+  duration_ms: 0.331412
+  type: 'test'
+  ...
+# Subtest: preferencias defectuosas no crean escudos ni volumen inválido
+ok 7 - preferencias defectuosas no crean escudos ni volumen inválido
+  ---
+  duration_ms: 1.679539
+  type: 'test'
+  ...
+# Subtest: tiempos legibles sin segundos fuera de rango
+ok 8 - tiempos legibles sin segundos fuera de rango
+  ---
+  duration_ms: 0.281076
+  type: 'test'
+  ...
+# Subtest: las preferencias se guardan sin peticiones de red
+ok 9 - las preferencias se guardan sin peticiones de red
+  ---
+  duration_ms: 2.01041
+  type: 'test'
+  ...
+# Subtest: buscar una posición NaN no rompe el reproductor
+ok 10 - buscar una posición NaN no rompe el reproductor
+  ---
+  duration_ms: 0.754526
+  type: 'test'
+  ...
+# Subtest: la marca, el icono y el logo original están referenciados
+ok 11 - la marca, el icono y el logo original están referenciados
+  ---
+  duration_ms: 2.74035
+  type: 'test'
+  ...
+# Subtest: sólo hay un elemento audio y dos opciones de entrada
+ok 12 - sólo hay un elemento audio y dos opciones de entrada
+  ---
+  duration_ms: 1.666567
+  type: 'test'
+  ...
+# Subtest: modelos, logo y música original coinciden con el manifiesto
+ok 13 - modelos, logo y música original coinciden con el manifiesto
+  ---
+  duration_ms: 645.196101
+  type: 'test'
+  ...
+# Subtest: todos los identificadores HTML son únicos
+ok 14 - todos los identificadores HTML son únicos
+  ---
+  duration_ms: 1.044092
+  type: 'test'
+  ...
+# Subtest: CanchaMedia sigue siendo el escenario principal
+ok 15 - CanchaMedia sigue siendo el escenario principal
+  ---
+  duration_ms: 2.157071
+  type: 'test'
+  ...
+# Subtest: cinco estaciones ordenadas y separadas uniformemente en una sola fila
+ok 16 - cinco estaciones ordenadas y separadas uniformemente en una sola fila
+  ---
+  duration_ms: 1.024202
+  type: 'test'
+  ...
+# Subtest: los cuatro escudos corresponden a sus mascotas explícitas
+ok 17 - los cuatro escudos corresponden a sus mascotas explícitas
+  ---
+  duration_ms: 1.894146
+  type: 'test'
+  ...
+# Subtest: Serrafín queda independiente; Asociación utiliza su nuevo escudo
+ok 18 - Serrafín queda independiente; Asociación utiliza su nuevo escudo
+  ---
+  duration_ms: 0.281303
+  type: 'test'
+  ...
+# Subtest: todas las rutas de modelos existen y son GLB 2.0 íntegros y autocontenidos
+ok 19 - todas las rutas de modelos existen y son GLB 2.0 íntegros y autocontenidos
+  ---
+  duration_ms: 405.822362
+  type: 'test'
+  ...
+# Subtest: todas las miniaturas de mascotas existen
+ok 20 - todas las miniaturas de mascotas existen
+  ---
+  duration_ms: 0.592349
+  type: 'test'
+  ...
+# Subtest: la vitrina completa nace invisible y sólo la apertura validada la muestra
+ok 21 - la vitrina completa nace invisible y sólo la apertura validada la muestra
+  ---
+  duration_ms: 0.937511
+  type: 'test'
+  ...
+# Subtest: las teclas repetidas no alternan la vitrina por cada frame
+ok 22 - las teclas repetidas no alternan la vitrina por cada frame
+  ---
+  duration_ms: 0.374573
+  type: 'test'
+  ...
+# Subtest: ningún escudo se carga ni se revela al iniciar
+ok 23 - ningún escudo se carga ni se revela al iniciar
+  ---
+  duration_ms: 5.566234
+  type: 'test'
+  ...
+# Subtest: primera E carga únicamente el escudo de la mascota seleccionada
+ok 24 - primera E carga únicamente el escudo de la mascota seleccionada
+  ---
+  duration_ms: 2.326603
+  type: 'test'
+  ...
+# Subtest: segunda E cierra, sin volver a descargar el logo
+ok 25 - segunda E cierra, sin volver a descargar el logo
+  ---
+  duration_ms: 0.611695
+  type: 'test'
+  ...
+# Subtest: cerrar durante la descarga impide una apertura tardía
+ok 26 - cerrar durante la descarga impide una apertura tardía
+  ---
+  duration_ms: 0.557713
+  type: 'test'
+  ...
+# Subtest: otra E durante la descarga cancela esa apertura
+ok 27 - otra E durante la descarga cancela esa apertura
+  ---
+  duration_ms: 0.556114
+  type: 'test'
+  ...
+# Subtest: cambiar de mascota descarta el resultado de la anterior
+ok 28 - cambiar de mascota descarta el resultado de la anterior
+  ---
+  duration_ms: 0.638809
+  type: 'test'
+  ...
+# Subtest: viajar o alejarse cierra la vitrina mediante close()
+ok 29 - viajar o alejarse cierra la vitrina mediante close()
+  ---
+  duration_ms: 0.446256
+  type: 'test'
+  ...
+# Subtest: un error deja todo cerrado y permite reintentar
+ok 30 - un error deja todo cerrado y permite reintentar
+  ---
+  duration_ms: 1.151807
+  type: 'test'
+  ...
+# Subtest: los descubrimientos cuentan una sola vez por escudo
+ok 31 - los descubrimientos cuentan una sola vez por escudo
+  ---
+  duration_ms: 0.970616
+  type: 'test'
+  ...
+# Subtest: identificadores vacíos no activan la carga
+ok 32 - identificadores vacíos no activan la carga
+  ---
+  duration_ms: 1.183835
+  type: 'test'
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 32
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 966.602291

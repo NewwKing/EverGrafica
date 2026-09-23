@@ -1,0 +1,86 @@
+{
+  "version": "3.0.0",
+  "site": "El Fortín Minero",
+  "models": [
+    {
+      "source": "CanchaMedia(3).glb",
+      "project": "models/CanchaMedia.glb",
+      "sha256": "0f04e3e33dfcc2f95745c62b04d2ca15e81741780729e2621cd2403d5eed94e3"
+    },
+    {
+      "source": "M23demarzo(2).glb",
+      "project": "models/mascota-23-marzo.glb",
+      "sha256": "3ac53fe2b3b3dbb08f3a5f153531426b7389a5f3a5c61653e1e1198d72281110"
+    },
+    {
+      "source": "Mballivian(2).glb",
+      "project": "models/mascota-ballivian.glb",
+      "sha256": "10a6262e0913cbcd409285d07fefe3e96e836bd581ab69fadc9024f946c9b859"
+    },
+    {
+      "source": "Mracing(2).glb",
+      "project": "models/mascota-racing.glb",
+      "sha256": "c4e3db5b27fecde20774b943c5deab2fcd4f2ae82b83903b02485ffc56414d31"
+    },
+    {
+      "source": "serrafin(3).glb",
+      "project": "models/serrafin.glb",
+      "sha256": "36d0d87813b3186dbea4da6370fe061a5a489f75fa3a936e2bf52499e34b5158"
+    },
+    {
+      "source": "23LogoOficial(2).glb",
+      "project": "models/logo-23-marzo.glb",
+      "sha256": "13d30500cf6e022139f617763bd750783f8e7ddb94423cfc2ccc8e0011f11448"
+    },
+    {
+      "source": "BallibiamLogoOficial(2).glb",
+      "project": "models/logo-ballivian.glb",
+      "sha256": "8754d2319a208a58a0d3883e3f7c3a0577eb7073119100cfe1554a4016564512"
+    },
+    {
+      "source": "RacingLogoOficial(2).glb",
+      "project": "models/logo-racing.glb",
+      "sha256": "b81a8909bc298927000deb891ea2c47f6cfa0f786375f6c553b6ad7a1107b253"
+    },
+    {
+      "source": "LogoAsociasion.glb",
+      "project": "models/logo-asociacion.glb",
+      "sha256": "b520eaa8e255525e58bc1480ede2d171f6589d53ea46c589c168b37dbaf843b9"
+    },
+    {
+      "source": "23demarzo.glb",
+      "project": "models/23demarzo.glb",
+      "sha256": "3c26680865d9f1fa8b93ecef2803682600fe24ed5b688c25028650e294e1a9c6",
+      "note": "Zona conservada de V2"
+    },
+    {
+      "source": "asociacion.glb",
+      "project": "models/asociacion.glb",
+      "sha256": "74b4bf321c32ed34516fb6649b638c649dff492cbd7b07440f23a4c2ff805836",
+      "note": "Zona conservada de V2"
+    },
+    {
+      "source": "balliviam.glb",
+      "project": "models/balliviam.glb",
+      "sha256": "9134aa20382feeb785f28f3be3588058e8f6409f789388ff14703c22fec80716",
+      "note": "Zona conservada de V2"
+    },
+    {
+      "source": "racing.glb",
+      "project": "models/racing.glb",
+      "sha256": "69dbd84cbd57397cebf4a73d134e35919a86607ab6705025ed60296b53791335",
+      "note": "Zona conservada de V2"
+    }
+  ],
+  "logo": {
+    "source": "logoPagina Web.png",
+    "project": "assets/logo-afll.png",
+    "sha256": "fb1d84ade5daaccf4292a51369686a0799cae83436b843cf9dddb880b21e0d89"
+  },
+  "audio": {
+    "source": "musicaPaginaWeb.m4a",
+    "project": "assets/audio/musica-fortin.m4a",
+    "sha256": "69a82e2e8102053f6eeacc103a4c97c31c41d0335874d2b93650c991f5056277",
+    "note": "El otro M4A adjunto tiene los mismos bytes; se incluye una sola pista. MP3 y OGG son conversiones del mismo audio."
+  }
+}
